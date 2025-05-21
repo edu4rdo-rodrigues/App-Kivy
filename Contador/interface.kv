@@ -1,0 +1,26 @@
+BoxLayout:
+    orientation: "vertical"
+    padding: 10
+    spacing: 10
+
+    Label:
+        id: label_contador
+        text: "0"
+        font_size: 40
+
+    BoxLayout:
+        size_hint_y: None
+        height: 50
+        spacing: 10
+
+        Button:
+            text: "Incrementar"
+            on_press:
+                # Aqui você pode chamar um método Python? Não, pois não tem classe
+                # Mas pode manipular o widget diretamente:
+                label_contador.text = str(int(label_contador.text) + 1)
+
+        Button:
+            text: "Decrementar"
+            on_press:
+                label_contador.text = str(int(label_contador.text) - 1)

@@ -1,0 +1,31 @@
+# saudacao.kv
+BoxLayout:
+    orientation: 'vertical'
+    spacing: 10
+    padding: 40
+
+    Label:
+        id: titulo
+        text: "Meu Primeiro App Kivy"
+        font_size: 24
+        color: 0, 0, 0.5, 1  # Azul escuro
+
+    TextInput:
+        id: entrada
+        hint_text: "Digite seu nome"
+        size_hint: 1, 0.2
+        multiline: False
+        foreground_color: 0, 0, 0, 1  # Preto
+
+    Button:
+        text: "Saudação"
+        size_hint: 1, 0.2
+        background_color: 0.2, 0.6, 1, 1  # Azul
+        color: 1, 1, 1, 1  # Texto branco
+        on_press: app.cumprimentar()
+
+    Label:
+        id: resultado
+        text: ""
+        font_size: 20
+        color: 0, 0.5, 0, 1  # Verde
