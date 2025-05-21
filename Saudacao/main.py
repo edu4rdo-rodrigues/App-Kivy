@@ -6,7 +6,7 @@ Window.clearcolor = (0.9, 0.9, 0.9, 1)
 
 class MeuApp(App):
     def build(self):
-        return Builder.load_file("Saudacao/saudacao.kv")  # Caminho correto para seu projeto
+        return Builder.load_file("Saudacao/interface.kv")  # Caminho correto para seu projeto
 
     def cumprimentar(self):
         nome = self.root.ids.entrada.text
